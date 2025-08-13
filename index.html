@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SPLT MILK Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="color-scheme" content="light" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <script src="script.js" async defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <h1 class="title sunset">SPLT MILK</h1>
+        <p class="kicker">
+          Afra and Tobia Scarpa — Benetton Production Facility, 1992–1995<br />Treviso,
+          Italy
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <!-- Section Divider -->
+      <hr class="divider" aria-hidden="true" />
+      <section class="block" data-project="PROJECT 001">
+        <div class="wrap">
+          <figure class="media">
+            <img
+              src="images/project-001.jpg"
+              alt="Steel frame detail of production facility"
+              onerror="this.classList.add('error')"
+            />
+            <figcaption>
+              Afra and Tobia Scarpa — structural detail, east elevation.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <hr class="divider" aria-hidden="true" />
+
+      <!-- TODO add 2nd/3rd slides -->
+      <section class="block" data-project="PROJECT 002">
+        <div class="wrap">
+          <figure class="media">
+            <video
+              class="media video square-video"
+              autoplay
+              loop
+              muted
+              playsinline
+              preload="metadata"
+              aria-label="Profile video"
+              onerror="this.classList.add('error')"
+            >
+              <!-- TODO: convert to webm -->
+              <source src="media/WalkmanPortfolioEdit.mov" type="video/mp4" />
+            </video>
+            <figcaption>Walkman caption</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <hr class="divider" aria-hidden="true" />
+
+      <!-- ===== Skills ===== -->
+      <section class="skills">
+        <div class="wrap">
+          <h2 class="title">SKILLS</h2>
+          <ul class="skill-tags" aria-label="Key skills">
+            <li>MOTION GRAPHICS</li>
+            <li>AUDIOVISUAL</li>
+            <li>GENERATIVE ART</li>
+            <li>INTERACTIVE</li>
+            <li>COMPOSITING</li>
+            <li>VISUAL EFFECTS</li>
+          </ul>
+        </div>
+      </section>
+
+      <hr class="divider" aria-hidden="true" />
+      <!-- Bottom profile / copy with passport-style looping video -->
+      <section class="profile">
+        <div class="wrap profile-grid">
+          <figure class="passport">
+            <!-- Replace source with your looping video (muted+playsinline is important on mobile) -->
+            <video
+              class="media video passport-video"
+              autoplay
+              loop
+              muted
+              playsinline
+              preload="metadata"
+              aria-label="Profile video"
+              onerror="this.classList.add('error')"
+            >
+              <source src="media/profile-loop.mp4" type="video/mp4" />
+              <!-- Optional webm -->
+              <!-- <source src="media/profile-loop.webm" type="video/webm" /> -->
+            </video>
+            <figcaption>Darryl White</figcaption>
+          </figure>
+
+          <!-- ===== About ===== -->
+          <div class="wrap">
+            <h2 class="title">About</h2>
+            <div class="outro-copy">
+              <p>
+                Darryl is a computer-based designer and creative coder working
+                from the UK. He develops audiovisual systems, interactive
+                installations, and motion graphics that sit between design and
+                software.
+              </p>
+              <p>
+                With a background in computer science, his work explores new
+                interfaces and production methods—prototyping tools, writing
+                custom shaders, and building generative pipelines that translate
+                sound, gesture and data into visual form.
+              </p>
+              <p>
+                Recent focus includes realtime graphics, VJ performances using
+                TouchDesigner, and web-based artworks in Canvas-Sketch.
+                Collaborations span culture and music, with an emphasis on
+                nostalgia, surrealism, and expressive technical aesthetics.
+              </p>
+              <ul class="contact contact--outro">
+                <!-- TODO: Email -->
+                <!-- <li>
+                  <a href="mailto:hello@example.com">hello@example.com</a>
+                </li> -->
+                <li>
+                  <a
+                    href="https://www.instagram.com/spilt__milk__/"
+                    rel="noopener"
+                    target="_blank"
+                    >Instagram</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <hr class="divider" aria-hidden="true" />
+        <small>© <span id="year"></span> SPLT MILK</small>
+      </div>
+    </footer>
+
+    <script>
+      // Tiny helper for the footer year
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <!-- Fixed side markers -->
+    <!-- <div class="project-marker project-marker--left" aria-hidden="true">
+      PROJECT 001
+    </div> -->
+    <div class="project-marker project-marker--right" aria-hidden="true">
+      PROJECT 001
+    </div>
+  </body>
+</html>
+
+<!-- TODO: PROJECT 002/003” markers -->
+<!-- TODO: Video 2nd/3rd slide markers on side of page -->
+<!-- TODO: Create posts -->

@@ -1,0 +1,381 @@
+/* ---------- Custom font (place your files in /fonts) ---------- */
+/* Example uses Inter Variable; replace src URLs with your own. */
+@font-face {
+  font-family: "Grotesk";
+  src: url("fonts/Grotesk.woff2") format("woff2-variations"),
+    url("fonts/Grotesk.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fusion";
+  src: url("fonts/Fusion.woff2") format("woff2-variations"),
+    url("fonts/Fusion.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---------- Design tokens ---------- */
+:root {
+  --bg: #faf9f7; /* slightly off-white */
+  --ink: #222222; /* off-black for titles */
+  --text: #2f2f2f;
+  --muted: #7a7a7a; /* caption grey */
+  --line: rgba(0, 0, 0, 0.15); /* hairline */
+  --wrap: 1080px; /* desktop measure */
+  --gap: 24px;
+  --radius: 16px;
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Grotesk, system-ui, -apple-system, Helvetica, Arial;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.wrap {
+  width: min(100%, calc(var(--wrap) + 2rem));
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+/* ---------- Type ---------- */
+.title {
+  color: var(--ink);
+  font-weight: 760;
+  letter-spacing: 0.01em;
+  margin: 0 0 0.5rem 0;
+}
+
+.subtitle {
+  color: var(--ink);
+  font-weight: 700;
+  margin: 2rem 0 0.5rem 0;
+}
+
+.kicker {
+  margin: 0.25rem 0 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* ---------- Dividers ---------- */
+.divider {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 2.25rem 0;
+  /* Sharper hairline on high-dpi displays */
+  transform: scaleY(0.5);
+  transform-origin: 50% 0;
+}
+
+/* ---------- Media blocks ---------- */
+.block {
+  padding: 0.5rem 0;
+}
+
+.media {
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+  justify-items: center;
+}
+
+.media img,
+.media picture,
+.media video {
+  max-width: min(100%, 1200px);
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.media figcaption {
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* ---------- Profile section with passport video ---------- */
+.profile {
+  padding: 1rem 0 3rem;
+}
+
+.profile-grid {
+  display: grid;
+  gap: var(--gap);
+  align-items: start;
+}
+
+.passport {
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+  justify-items: center;
+}
+
+.video {
+  display: block;
+  object-fit: cover;
+  background: #d9d9d9; /* placeholder bg while loading */
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05), 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.passport-video {
+  width: 220px; /* desktop size */
+  aspect-ratio: 3 / 4; /* passport-ish */
+  border-radius: calc(var(--radius) * 0.75);
+}
+
+.passport figcaption {
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.landscape-video {
+  aspect-ratio: 16 / 9;
+}
+
+.square-video {
+  aspect-ratio: 1 / 1;
+}
+
+.copy {
+  max-width: 70ch;
+}
+
+.contact {
+  padding: 0;
+  margin: 0 0 1rem 0;
+  list-style: none;
+}
+
+.contact a {
+  color: inherit;
+  text-underline-offset: 3px;
+}
+
+/* ---------- Header/Footer ---------- */
+.site-header {
+  padding: 1.5rem 0 0.75rem;
+}
+.site-footer {
+  padding: 0.75rem 0 2rem;
+}
+.site-footer small {
+  color: var(--muted);
+}
+
+/* ---------- Responsive rules ---------- */
+/* Mobile-first: images are full width and centered by default */
+
+@media (min-width: 720px) {
+  .media img {
+    max-width: min(100%, 1000px);
+  }
+  .profile-grid {
+    grid-template-columns: 240px 1fr;
+    align-items: start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .media img {
+    max-width: min(100%, 1120px);
+  }
+  .passport-video {
+    width: 260px;
+  }
+}
+
+/* ===== Skills ===== */
+.skills {
+  padding: 1rem 0 2.5rem;
+}
+
+.skill-tags {
+  --pill-bg: rgba(255, 255, 255, 0.5);
+  --pill-border: var(--line);
+  --pill-ink: var(--ink);
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.6rem;
+}
+
+.skill-tags li {
+  border: 1px solid var(--pill-border);
+  background: var(--pill-bg);
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--pill-ink);
+  box-shadow: 0 0.5px 0 rgba(0, 0, 0, 0.06);
+  user-select: none;
+}
+
+.skill-tags li:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media (min-width: 720px) {
+  .skill-tags {
+    gap: 0.75rem;
+  }
+  .skill-tags li {
+    padding: 0.8rem 1.1rem;
+  }
+}
+/*  */
+
+/* ===== Outro / Information ===== */
+.outro {
+  padding: 1rem 0 3rem;
+}
+.outro .title {
+  margin-bottom: 0.75rem;
+}
+
+.outro-copy {
+  max-width: 72ch;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.outro-copy p {
+  margin: 0 0 1rem 0;
+}
+
+.contact--outro {
+  margin-top: 1rem;
+  gap: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact--outro a {
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  text-underline-offset: 3px;
+  padding-bottom: 2px;
+}
+
+/* Sunset */
+.title.sunset {
+  background-image: linear-gradient(90deg, #0062f4, #ff3d81, #ff961e, #08ce47);
+  background-size: 300% 300%;
+  animation: sunset-shift 12s ease-in-out infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.title.sunset {
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+@keyframes sunset-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Fixed side markers */
+.project-marker {
+  font-size: 0.75rem;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.35rem 0.6rem;
+  font-weight: 760;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.65);
+  /* border: 1px solid var(--line); */
+  /* border-radius: 999px; */
+  backdrop-filter: blur(2px);
+  z-index: 50;
+  pointer-events: none;
+}
+
+.project-marker--left {
+  left: 0.75rem;
+}
+.project-marker--right {
+  right: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .project-marker--left {
+    left: 1.25rem;
+  }
+  .project-marker--right {
+    right: 1.25rem;
+  }
+}
+
+/* Optional vertical orientation to echo your inspiration */
+@media (min-width: 1024px) {
+  .project-marker {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    padding: 0.5rem 0.45rem;
+  }
+}
+
+/* Image /Video Error */
+media.error {
+  display: inherit;
+  /* transform: scale(1); */
+  content: " ";
+  color: transparent;
+  width: 200px; /* image width */
+  height: 200px; /* image height */
+  position: relative;
+}
+
+media.error::before {
+  background: url(https://www.w3schools.com/html/img_chania.jpg) no-repeat
+    center;
+  content: " ";
+  position: inherit;
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  left: 0;
+  top: 0;
+}
