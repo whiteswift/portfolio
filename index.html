@@ -12,18 +12,19 @@
   <body>
     <header class="site-header">
       <div class="wrap">
-        <h1 class="title sunset">SPLT MILK</h1>
-        <p class="kicker">
+        <h1 class="title sunset">SPILT MILK</h1>
+        <!-- <p class="kicker">
           Afra and Tobia Scarpa — Benetton Production Facility, 1992–1995<br />Treviso,
           Italy
-        </p>
+        </p> -->
       </div>
     </header>
 
     <main>
       <!-- Section Divider -->
       <hr class="divider" aria-hidden="true" />
-      <section class="block" data-project="PROJECT 001">
+
+      <!-- <section class="block" data-project="PROJECT 001">
         <div class="wrap">
           <figure class="media">
             <img
@@ -36,11 +37,31 @@
             </figcaption>
           </figure>
         </div>
+      </section> -->
+
+      <section class="block" data-project="PROJECT 001">
+        <div class="wrap">
+          <figure class="media">
+            <video
+              class="media video square-video"
+              autoplay
+              loop
+              muted
+              playsinline
+              preload="metadata"
+              aria-label="Warehouse NYE Dance Video"
+              onerror="this.classList.add('error')"
+            >
+              <!-- TODO: convert to webm -->
+              <source src="media/1_WarehouseNYE/dance.mp4" type="video/mp4" />
+            </video>
+            <figcaption>Warehouse NYE Dance Video</figcaption>
+          </figure>
+        </div>
       </section>
 
       <hr class="divider" aria-hidden="true" />
 
-      <!-- TODO add 2nd/3rd slides -->
       <section class="block" data-project="PROJECT 002">
         <div class="wrap">
           <figure class="media">
@@ -51,29 +72,130 @@
               muted
               playsinline
               preload="metadata"
-              aria-label="Profile video"
+              aria-label="Nakagin Capsule Tower Audio Reactive 3D Render"
               onerror="this.classList.add('error')"
             >
               <!-- TODO: convert to webm -->
-              <source src="media/WalkmanPortfolioEdit.mov" type="video/mp4" />
+              <source src="media/2_Nakagin/nakagin_main.mov" type="video/mp4" />
             </video>
-            <figcaption>Walkman caption</figcaption>
+            <figcaption>
+              Nakagin Capsule Tower Audio Reactive 3D Render
+            </figcaption>
           </figure>
         </div>
       </section>
 
       <hr class="divider" aria-hidden="true" />
 
+      <section class="block" data-project="PROJECT 003">
+        <div class="wrap">
+          <figure class="media">
+            <video
+              class="media video square-video"
+              autoplay
+              loop
+              muted
+              playsinline
+              preload="metadata"
+              aria-label="Walkman Logo Audio Visualiser"
+              onerror="this.classList.add('error')"
+            >
+              <!-- TODO: convert to webm -->
+              <source
+                src="media/3_Walkman/WalkmanPortfolioEdit.mov"
+                type="video/mp4"
+              />
+            </video>
+            <figcaption>Walkman Logo Audio Visualiser</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <hr class="divider" aria-hidden="true" />
+
+      <section class="block" data-project="PROJECT 004">
+        <div class="wrap">
+          <figure class="media">
+            <video
+              class="media video square-video"
+              autoplay
+              loop
+              muted
+              playsinline
+              preload="metadata"
+              aria-label="Pure Rubber Spotify Canvas"
+              onerror="this.classList.add('error')"
+            >
+              <!-- TODO: convert to webm -->
+              <source
+                src="media/4_Ririko_Pure_Rubber/1350CanvasEdit.mov"
+                type="video/mp4"
+              />
+            </video>
+            <figcaption>Pure Rubber Track - Spotify Canvas</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- <hr class="divider" aria-hidden="true" /> -->
+
+      <!-- ===== Media Carousel ===== -->
+      <!-- <section class="carousel" data-carousel>
+        <button class="nav prev" data-prev aria-label="Previous slide">
+          ‹
+        </button>
+
+        <div class="viewport" data-viewport>
+          <div class="track" data-track>
+
+            <figure class="slide" data-slide>
+              <video
+                controls
+                playsinline
+                preload="metadata"
+                poster="media/slitScanVinyl.jpg"
+              >
+                <source src="media/slitScanVinyl.jpg" type="video/mp4" />
+              </video>
+              <figcaption>Excerpt — clip 1</figcaption>
+            </figure>
+
+            <figure class="slide" data-slide>
+              <img src="images/still-2.jpg" alt="Still frame, variant B" />
+              <figcaption>Still — variant B</figcaption>
+            </figure>
+
+            <figure class="slide" data-slide>
+              <video
+                controls
+                playsinline
+                preload="metadata"
+                poster="images/poster-3.jpg"
+              >
+                <source src="media/clip-3.mp4" type="video/mp4" />
+              </video>
+              <figcaption>Excerpt — clip 3</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <button class="nav next" data-next aria-label="Next slide">›</button>
+
+        <div class="dots" data-dots aria-hidden="true"></div>
+      </section> -->
+
+      <hr class="divider" aria-hidden="true" />
+
       <!-- ===== Skills ===== -->
       <section class="skills">
         <div class="wrap">
-          <h2 class="title">SKILLS</h2>
+          <!-- <h2 class="title">SKILLS</h2> -->
           <ul class="skill-tags" aria-label="Key skills">
+            <li>AUDIO REACTIVE</li>
             <li>MOTION GRAPHICS</li>
             <li>AUDIOVISUAL</li>
             <li>GENERATIVE ART</li>
             <li>INTERACTIVE</li>
-            <li>COMPOSITING</li>
             <li>VISUAL EFFECTS</li>
           </ul>
         </div>
@@ -95,7 +217,7 @@
               aria-label="Profile video"
               onerror="this.classList.add('error')"
             >
-              <source src="media/profile-loop.mp4" type="video/mp4" />
+              <source src="media/profile/profile-loop.mp4" type="video/mp4" />
               <!-- Optional webm -->
               <!-- <source src="media/profile-loop.webm" type="video/webm" /> -->
             </video>
@@ -160,11 +282,46 @@
       PROJECT 001
     </div> -->
     <div class="project-marker project-marker--right" aria-hidden="true">
-      PROJECT 001
+      PROJECT 000
     </div>
   </body>
+  <script src="carousel.js" async defer></script>
+  <link rel="stylesheet" href="carousel.css" />
 </html>
 
-<!-- TODO: PROJECT 002/003” markers -->
+<!-- index.html -->
+<!-- Flexbox grid layout for multiple projects like portfolio -->
+<!-- Have a tag - e.g. "Interactive" -->
+
+<!-- Have a promotion showreel edited in touchdesigner
+
+- Quick flashes of projects
+- Show network
+- Go over categories/types of projects
+
+-->
+
+<!-- project.html -->
+<!-- media grid laid out randomly in a spread across the page -->
+
 <!-- TODO: Video 2nd/3rd slide markers on side of page -->
 <!-- TODO: Create posts -->
+
+<!-- REDO video for dither effect -->
+
+<!-- TODO: PROJECT 002/003” markers? -->
+
+<!-- 
+
+TD PROJECTS
+
+NYE
+Nakagin
+Walkman audio visualiser
+LILKO Pure rubber
+Radial audio histogram
+
+CANVAS SKETCH PROJECTS
+
+Wipeout
+-->

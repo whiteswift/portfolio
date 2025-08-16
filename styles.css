@@ -19,13 +19,25 @@
 }
 
 /* ---------- Design tokens ---------- */
-:root {
-  --bg: #faf9f7; /* slightly off-white */
-  --ink: #222222; /* off-black for titles */
+/* :root {
+  --bg: #faf9f7; 
+  --ink: #222222;
   --text: #2f2f2f;
-  --muted: #7a7a7a; /* caption grey */
-  --line: rgba(0, 0, 0, 0.15); /* hairline */
-  --wrap: 1080px; /* desktop measure */
+  --muted: #7a7a7a;
+  --line: rgba(0, 0, 0, 0.15);
+  --wrap: 1080px;
+  --gap: 24px;
+  --radius: 16px;
+} */
+
+:root {
+  /* :root[data-theme="dark"] { */
+  --bg: #121212; /* near-black, but not pure black */
+  --ink: #f0f0f0; /* light ink for titles */
+  --text: #d4d4d4; /* light grey body text */
+  --muted: #9a9a9a; /* softer grey for captions */
+  --line: rgba(255, 255, 255, 0.15); /* subtle hairline in light-on-dark */
+  --wrap: 1080px;
   --gap: 24px;
   --radius: 16px;
 }
@@ -64,6 +76,7 @@ body {
   font-weight: 760;
   letter-spacing: 0.01em;
   margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
 }
 
 .subtitle {
@@ -137,7 +150,6 @@ body {
 .video {
   display: block;
   object-fit: cover;
-  background: #d9d9d9; /* placeholder bg while loading */
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05), 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
@@ -289,7 +301,7 @@ body {
 
 /* Sunset */
 .title.sunset {
-  background-image: linear-gradient(90deg, #0062f4, #ff3d81, #ff961e, #08ce47);
+  background-image: linear-gradient(90deg, #0062f4, #ff3d81, #ff961e, #ce0885);
   background-size: 300% 300%;
   animation: sunset-shift 12s ease-in-out infinite;
   -webkit-background-clip: text;
@@ -298,6 +310,7 @@ body {
 }
 
 .title.sunset {
+  font-size: 2em;
   font-weight: 800;
   letter-spacing: 0.02em;
 }
